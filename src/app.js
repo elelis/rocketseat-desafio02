@@ -8,22 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// const repositories = [];
-
-const repositories = 
-[
-  {
-    "id": "7cdfd6ce-c10c-4879-9d61-e764662df119",
-    "title": "Desafio 2 novo",
-    "url": "https://github.com/elelis/rocketseat-desafio02.git",
-    "techs": [
-      "Node.js",
-      "PHP",
-      "React"
-    ],
-    "likes": 0
-  }
-]
+const repositories = [];
 
 app.get("/repositories", (request, response) => {
   return response.json(repositories);
